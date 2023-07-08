@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/css";
+import { css } from "@emotion/react";
 import { colors } from "./colors";
 import { fonts } from "./typography";
 
-export const reset: string = css`
+export const reset = css`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
   /* Box sizing rules */
@@ -82,11 +82,12 @@ export const reset: string = css`
   }
 `;
 
-export const global: string = css`
+export const global = css`
   body {
     font-size: 1rem;
     line-height: 1.5rem;
     font-family: ${fonts.primary};
-    color: ${colors.background};
+    color: ${colors.gray.dark};
+    background-color: ${colors.background};
   }
 `;
