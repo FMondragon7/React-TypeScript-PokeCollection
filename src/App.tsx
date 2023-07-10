@@ -14,7 +14,7 @@ function App() {
     setFormData({...formData, [name]: value})
   }
 
-  function handleSubmit (event: ChangeEvent<HTMLInputElement>): void {
+  function handleSubmit (event: ChangeEvent<HTMLFormElement>): void {
     event.preventDefault()
 
     console.log({email, password})
