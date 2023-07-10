@@ -1,10 +1,12 @@
 import { ChangeEvent ,useState } from "react"
 
+import Input from "./components/inputs";
+
 function App() {
 
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "fernando@mail.com",
+    password: "123456",
   });
 
   const { email, password } = formData;
@@ -24,28 +26,24 @@ function App() {
     <div>
       <h1>Welcome to Poke Collection</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email" >Email</label>
-          <input 
-            id="email"
-            name="email"
-            type="email"
-            value={email}
-            onChange={handleChange}
-            placeholder="example@mail.com"
-          />
-        </div>
-        <div>
-          <label htmlFor="password" >Password</label>
-          <input 
-            id="password"
-            name="password"
-            type="password"
-            value={password}
-            onChange={handleChange}
-            placeholder="example@mail.com"
-          />
-        </div>
+        <Input 
+          id="email"
+          name="email"
+          type="email"
+          value={email}
+          onChange={handleChange}
+          placeholder="example@mail.com"
+          label="Email"
+        />
+        <Input 
+          id="password"
+          name="password"
+          type="password"
+          value={password}
+          onChange={handleChange}
+          placeholder="********"
+          label="Password"
+        />
         <button type="submit">Login</button>
       </form>
     </div>
